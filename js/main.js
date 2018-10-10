@@ -29,22 +29,26 @@ document.addEventListener("DOMContentLoaded", function() {
     let itemName, price, qty, subTotal, totalItems, item;
     let addItem = () => {
         
-        sumTotalItem +=1;
 
         itemName = document.getElementById('name').value;
         price = document.getElementById('price').value;
         qty = document.getElementById('qty').value;
         subTotal = document.getElementById('subtotal');
         totalItems = document.getElementById('total-items');
-        item = new Item (itemName,price,qty);
 
-        let total = item.total;
-        arrTotal.push(total)
+        if(itemName !== "" && price !== "" && qty !== "") {
+            item = new Item (itemName,price,qty);
 
-       viewItem(sumTotalItem,itemName,price,qty,total);
-
-       subTotal.innerHTML = item.calcSubTotal(arrTotal);
-       totalItems.innerHTML = sumTotalItem;
+            sumTotalItem +=1;
+    
+            let total = item.total;
+            arrTotal.push(total)
+    
+           viewItem(sumTotalItem,itemName,price,qty,total);
+    
+           subTotal.innerHTML = item.calcSubTotal(arrTotal);
+           totalItems.innerHTML = sumTotalItem;
+        }
     }
     
     
