@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Shopping Calculator</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="container">
+
+        <!-- SHOPPING CART -->
+        <!-- <main class="shopping"> -->
+                <main>
+            <!-- NEW ITEM -->
+            <div class="new-item">
+                <h1 class="new-item__text">New Item</h1>
+
+                <form action="#" id="new" class="new-item__form">
+                    <div class="new-item__form-group">
+                        <label for="name" class="new-item__label">Item Name</label>
+                        <input type="text" class="new-item__name" id="name" required>
+                    </div>
+
+                    <div class="new-item__price-qty">
+                    <div class="new-item__form-group">
+                        <label for="price" class="new-item__label">Price</label>
+                        <input type="number" min="1" class="new-item__price" id="price" required>
+                    </div>
+
+                    <div class="new-item__form-group">
+                        <label for="qty" class="new-item__label">Qty</label>
+                        <input type="number" min="1" class="new-item__qty" id="qty" required>
+                    </div>
+                </div>
+
+                    <div class="new-item__form-group-btn">
+                        <button type="submit" id="btn-add-to-cart" class="btn-add-new">Add TO CART</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- CART-->
+            <div class="cart">
+
+                <!-- Summary -->
+                <section class="cart-summary">
+                    <h1 class="cart-summary__text">
+                        <span id="total-items" class="cart-summary__total-items-count">0</span> items in cart
+                    </h1>
+                    <h1 id="subtotal" class="cart-summary__total-cost">0</h1>
+                </section>
+
+                <!-- List -->
+                <section class="cart-items">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>Item Name</td>
+                                <td>Price</td>
+                                <td>Quantity</td>
+                                <td>Total</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td id="id"></td>
+                            <td id="item"></td>
+                            <td id="itmprice"></td>
+                            <td id="itmqty"></td>
+                            <td id="total"></td>
+                        </tbody>
+                    </table>
+                </section>
+
+
+                <!-- Checkout -->
+                <section class="checkout">
+                    <a href="#name" id="addnew" class="btn-continue">Add New</a>
+                    <button type="submit" id="clear" class="btn-clear-cart">Clear Cart</button>
+                </section>
+
+            </div>
+        </main>
+    </div>
+    </body>
+</html>
